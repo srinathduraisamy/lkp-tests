@@ -1,0 +1,13 @@
+suite: dmatest
+testcase: dmatest
+category: functional
+
+dmatest:
+  timeout:
+    - 2000
+  iterations:
+    - 1
+      #  channel:
+      #    - dma0chan0
+  run:
+    - 1
