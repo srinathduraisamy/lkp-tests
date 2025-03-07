@@ -1,0 +1,22 @@
+#!/bin/sh
+# - timeout
+# - iterations
+# - run
+
+# checks if dmatest is an existing module, and if it is, run it
+if modinfo dmatest | grep -q "ERROR: Module dmatest not found"; then
+    echo "ERROR: Module dmatest not found."
+    exit 1
+else
+    # clear the kernel log, since dmatest writes to it and we wanna see what it outputs
+    dmesg -c
+    echo "Running dmatest..."
+    modprobe dmatest timeout=$timeout iterations=$iterations  run=$run
+    dmesg
+    # dmatest has been run, now remove the module
+    # echo "dmatest complete, now removing..."
+    modprobe -r dmatest
+    echo "Done."
+    exit 0
+fi
+

@@ -51,7 +51,7 @@ class LinuxTestcasesTableSet
        autonuma-benchmark adrestia kernbench rt-app migratepages intel-ipsec-mb
        simd-stress bpftrace stress-ng coremark tinymembench pybench phpbench lz4-test openssl-speed].freeze
   LINUX_TESTCASES =
-    %w[analyze-suspend boot blktests cpu-hotplug ext4-frags ftq ftrace-onoff fwq
+    %w[analyze-suspend boot blktests cpu-hotplug dmatest ext4-frags ftq ftrace-onoff fwq
        galileo irda-kernel kernel-builtin kernel-selftests kvm-unit-tests kvm-unit-tests-qemu
        leaking-addresses lkvs locktorture ltp mce-test otc-ddt piglit pm-qa nvml qat
        qemu rcuscale rcutorture suspend suspend-stress trinity ndctl nfs-test hwsim
